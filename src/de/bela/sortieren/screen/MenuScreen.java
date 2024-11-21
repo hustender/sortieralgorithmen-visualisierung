@@ -56,6 +56,7 @@ public class MenuScreen extends JPanel {
         });
 
         button.setText(name); // Beschriftung
+        button.setToolTipText(type.description); // Beschreibung
 
         int y = window.getHeight() / (2 * Sort.SortType.values().length) + 10; // Vertikalen Abstand berechnen
         this.add(Box.createRigidArea(new Dimension(0, y))); // Vertikalen Abstand zwischen den Buttons hinzufügen

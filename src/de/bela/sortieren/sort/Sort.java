@@ -74,11 +74,17 @@ public abstract class Sort {
 
     // Sortierart Enum
     public enum SortType {
-        SELECTIONSORT,
-        BUBBLESORT,
-        QUICKSORT,
-        INSERTIONSORT,
-        MERGESORT
+        SELECTIONSORT("Selection Sort ist ein einfacher Sortieralgorithmus, der in-place arbeitet. Er sortiert ein Array, indem er wiederholt das Minimum (oder Maximum) von den unsortierten Elementen auswählt und es an den Anfang (bzw. das Ende) des sortierten Array platziert."),
+        BUBBLESORT("Bubble Sort ist ein einfacher Sortieralgorithmus, der in-place arbeitet. Er sortiert ein Array, indem er wiederholt benachbarte Elemente vertauscht, wenn sie in der falschen Reihenfolge sind."),
+        QUICKSORT("Quick Sort ist ein schneller Sortieralgorithmus, der in-place arbeitet. Er wählt ein Element als Pivot und partitioniert das Array um den Pivot, sodass Elemente kleiner als der Pivot links und Elemente größer als der Pivot rechts stehen."),
+        INSERTIONSORT("Insertion Sort ist ein einfacher Sortieralgorithmus, der in-place arbeitet. Er sortiert ein Array, indem er Elemente nacheinander durchläuft und sie an die richtige Position im sortierten Array einfügt."),
+        MERGESORT("Merge Sort ist ein stabiler Sortieralgorithmus, der nicht in-place arbeitet. Er teilt das Array in zwei Hälften, sortiert die Hälfte jeweils wieder mit Merge Sort und fügt sie wieder zusammen.");
+
+        public final String description; // Beschreibung des Sortieralgorithmus
+
+        SortType(String description) {
+            this.description = description; // Beschreibung initialisieren
+        }
     }
 
 }
